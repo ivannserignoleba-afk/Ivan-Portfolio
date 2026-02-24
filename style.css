@@ -200,4 +200,144 @@ footer { background: #000; color: var(--text-dim); text-align: center; padding: 
     .hero h1 { font-size: 2rem; }
     .about-content { flex-direction: column; }
     .btn { width: 100%; margin: 10px 0; text-align: center; }
+    /* AVATAR ROBOTIQUE ANIMÉ */
+.avatar-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.robot-avatar {
+    position: relative;
+    width: 150px;
+    height: 180px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.head {
+    width: 120px;
+    height: 100px;
+    background: linear-gradient(180deg, #1a3a1a 0%, #0d1f0d 100%);
+    border: 3px solid var(--primary);
+    border-radius: 20px;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+}
+
+.eyes {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.eye {
+    width: 25px;
+    height: 12px;
+    background: var(--primary);
+    border-radius: 3px;
+    box-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary);
+    animation: blink 4s infinite, glow 2s ease-in-out infinite alternate;
+}
+
+.mouth {
+    width: 60px;
+    height: 8px;
+    background: rgba(0, 255, 136, 0.3);
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: talk 3s ease-in-out infinite;
+}
+
+.antenna {
+    width: 4px;
+    height: 30px;
+    background: var(--secondary);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.antenna-ball {
+    width: 15px;
+    height: 15px;
+    background: var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px var(--primary);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.body {
+    width: 100px;
+    height: 80px;
+    background: linear-gradient(180deg, #1a3a1a 0%, #0d1f0d 100%);
+    border: 3px solid var(--primary);
+    border-radius: 15px;
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chest-light {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 255, 136, 0.2);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: chestPulse 2s ease-in-out infinite;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes blink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary); }
+    100% { box-shadow: 0 0 30px var(--primary), 0 0 60px var(--primary); }
+}
+
+@keyframes talk {
+    0%, 100% { height: 8px; }
+    50% { height: 12px; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: translateX(-50%) scale(1); opacity: 1; }
+    50% { transform: translateX(-50%) scale(1.2); opacity: 0.7; }
+}
+
+@keyframes chestPulse {
+    0%, 100% { box-shadow: 0 0 30px rgba(0, 255, 136, 0.5); }
+    50% { box-shadow: 0 0 50px rgba(0, 255, 136, 0.8); }
+}
+
 }
