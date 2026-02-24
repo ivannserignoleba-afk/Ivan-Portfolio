@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ivan | Développeur Web</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Polices Google : Orbitron (Robotique) et Roboto Mono (Code) -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Icônes FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Canvas pour l'effet Matrix en arrière-plan -->
+    <canvas id="matrix-bg"></canvas>
+
+    <!-- Effet de grille en arrière-plan -->
+    <div class="bg-grid"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Ivan<span class="dot">.DEV</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">_about</a></li>
+                <li><a href="#skills">_skills</a></li>
+                <li><a href="#projects">_projects</a></li>
+                <li><a href="#contact">_contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header id="home" class="hero">
+        <div class="container hero-content">
+            
+            <!-- Avatar Robotique Animé -->
+            <div class="avatar-container">
+                <div class="robot-avatar">
+                    <div class="head">
+                        <div class="eyes">
+                            <div class="eye left"></div>
+                            <div class="eye right"></div>
+                        </div>
+                        <div class="mouth"></div>
+                        <div class="antenna">
+                            <div class="antenna-ball"></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="chest-light"></div>
+                    </div>
+                </div>
+                <div class="avatar-glow"></div>
+            </div>
+
+            <p class="glitch-text" data-text="SYSTEM ONLINE">SYSTEM ONLINE</p>
+            <h1>Bonjour, je suis <span class="highlight typing-text"></span></h1>
+            <h2 class="robotic-text">Développeur Web PHP & Front-End</h2>
+            <p class="hero-desc">Je conçois des architectures web performantes. Prêt à déployer vos projets.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary"><i class="fas fa-play"></i> Voir projets</a>
+                <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- À Propos -->
+    <section id="about" class="section reveal">
+        <div class="container">
+            <h2 class="section-title"><span class="bracket">[</span> À Propos <span class="bracket">]</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>> Initialisation du profil utilisateur...</p>
+                    <p>Passionné par le code et la logique,     
+                        je transforme des problèmes complexes en solutions élégantes.
+                         Mon objectif est d'optimiser l'expérience utilisateur tout en maintenant un code propre et maintenable.</p>
+                    <p>> Statut : <span class="highlight">Recherche d'opportunités</span></p>
+                </div>
+                <div class="about-img">
+                    <div class="placeholder-img"><i class="fas fa-user-astronaut"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="skills" class="section bg-dark reveal">
+        <div class="container">
+            <h2 class="section-title"><span class="bracket">[</span> Compétences <span class="bracket">]</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card"><i class="fab fa-php"></i><p>PHP</p></div>
+                <div class="skill-card"><i class="fab fa-js"></i><p>JavaScript</p></div>
+                <div class="skill-card"><i class="fab fa-html5"></i><p>HTML5</p></div>
+                <div class="skill-card"><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+                <div class="skill-card"><i class="fas fa-database"></i><p>MySQL</p></div>
+                <div class="skill-card"><i class="fab fa-git-alt"></i><p>Git</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projects" class="section reveal">
+        <div class="container">
+            <h2 class="section-title"><span class="bracket">[</span> Projets <span class="bracket">]</span></h2>
+            <div class="projects-grid">
+                
+                <!-- Projet 1 -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Site E-commerce</h3>
+                        <p class="status finished">● TERMINÉ</p>
+                        <p>Boutique en ligne avec gestion de panier et paiement sécurisé.</p>
+                        <div class="tech-stack">
+                            <span>PHP</span><span>MySQL</span><span>CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-link"></i> Démo</a>
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>App de Gestion</h3>
+                        <p class="status progress">● EN COURS</p>
+                        <p>Dashboard admin. Module d'authentification en cours de développement.</p>
+                        <div class="tech-stack">
+                            <span>PHP</span><span>JS</span><span>API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Portfolio V1</h3>
+                        <p class="status progress">● BUILDING</p>
+                        <p>Site personnel pour présenter mon parcours et mes compétences.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section bg-dark reveal">
+        <div class="container">
+            <h2 class="section-title"><span class="bracket">[</span> Contact <span class="bracket">]</span></h2>
+            <div class="contact-content">
+                <p>> En attente de connexion... Envoyez un signal.</p>
+                <div class="contact-info">
+                    <div class="contact-item"><i class="fas fa-envelope"></i>ivannserignoleba@gmail.com</div>
+                    <div class="contact-item"><i class="fab fa-linkedin"></i> linkedin.comivann</div>
+                    <div class="contact-item"><i class="fab fa-github"></i> github.com/ivann</div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Nom_" required>
+                    <input type="email" placeholder="Email_" required>
+                    <textarea rows="5" placeholder="Message_" required></textarea>
+                    <button type="submit" class="btn btn-primary">TRANSMETTRE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ivan.System | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
