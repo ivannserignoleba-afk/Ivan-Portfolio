@@ -44,7 +44,7 @@ if (burger && nav) {
 // === MACHINE A ECRIRE ===
 const textElement = document.querySelector('.typing-text');
 if (textElement) {
-  const texts = ['Ivann', 'Un Développeur', 'Un Créateur'];
+  const texts = ['Seri Gnoleba', 'Développeur Web', 'Créateur numérique'];
   let count = 0, index = 0;
   (function type() {
     const currentText = texts[count % texts.length];
